@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block style %}
+body {
+    background-image: linear-gradient(to right top, #2980b9, #2c86c1, #2e8cca, #3192d2, #3498db);
+	height: 100vh;
+	min-height: 100vh;
+	padding-top: 3.5em;
+}
+{% endblock style %}
+
+{% block body %}
+
+<div class="container h-100">
+
+    <div class="row g-12 h-100 justify-content-center  align-items-center">
+
+        <form class="col-md-7 col-lg-5 col-xl-4  bg-light" method="POST" action="/signup">
+            {% csrf_token %}
+
+            <div class="form-group">
+
+                <h1 class="h3 mt-3 text-center">Create an account</h1>
+
+            </div>
+
+            <div class="form-group py-2">
+                <input class="form-control" placeholder="First Name" type="text" name="fname" required="">
+            </div>
+
+            <div class="form-group py-2">
+                <input class="form-control" placeholder="Last Name" type="text" name="lname" required="">
+            </div>
+
+            <div class="form-group py-2">
+                <input class="form-control" placeholder="User Name" type="text" name="uname" required="">
+            </div>
+
+            <div class="form-group py-2">
+                <input class="form-control" placeholder="Email" type="text" name="email" required="">
+            </div>
+
+            <div class="form-group py-2">
+                <input class="form-control" placeholder="Password" type="password" name="password" required="">
+            </div>
+
+            <div class="form-group py-2">
+                <input class="form-control" placeholder="Confirm Password" type="password" name="cpassword" required="">
+            </div>
+
+            <div class="form-group py-2">
+                <button type="submit" class="btn btn-block btn-primary">Register</button>
+            </div>
+            
+
+            <p class="text-center"><a href="/signin">Already have an account?</a></p>
+
+        </form>
+
+    </div>
+
+</div>
+{% endblock body %}
+  

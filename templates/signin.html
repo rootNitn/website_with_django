@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% block style %}
+html,
+body {
+height: 100%;
+}
+
+
+
+.form-signin {
+width: 100%;
+max-width: 330px;
+padding: 15px;
+margin: auto;
+}
+
+.form-signin .checkbox {
+font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+z-index: 2;
+}
+
+.form-signin input[type="email"] {
+margin-bottom: -1px;
+border-bottom-right-radius: 0;
+border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+margin-bottom: 10px;
+border-top-left-radius: 0;
+border-top-right-radius: 0;
+}
+.bd-placeholder-img {
+font-size: 1.125rem;
+text-anchor: middle;
+-webkit-user-select: none;
+-moz-user-select: none;
+user-select: none;
+}
+
+@media (min-width: 768px) {
+.bd-placeholder-img-lg {
+font-size: 3.5rem;
+}
+}
+
+
+.btn-facebook {
+color: #fff;
+background-color: #3b5998;
+border-color: rgba(0,0,0,0.2);
+}
+
+.btn-social {
+position: relative;
+padding-left: 44px;
+text-align: left;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.btn-social:hover {
+color: #eee;
+}
+
+.btn-social :first-child {
+position: absolute;
+left: 0;
+top: 0;
+bottom: 0;
+width: 40px;
+padding: 7px;
+font-size: 1.6em;
+text-align: center;
+border-right: 1px solid rgba(0,0,0,0.2);
+}
+{% endblock style %}
+
+{% block body %}
+  
+
+<div class="form-signin text-center">
+  <form class="py-5" method="POST" action="/signin">
+    {% csrf_token %}
+    <img class="mb-4" src="/static/img/ab3.jpg" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+    <div class="form-floating">
+      <input type="text" name="username" class="form-control" id="floatingInput" placeholder="name@example.com" required="">
+      <label for="floatingInput">username</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password" required="">
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me" required=""> Remember me
+      </label>
+    </div>
+
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    <p style="text-decoration: none">For New User -<a href="/signup"> Signup</a></p>
+    <div class="row">
+      <div class="col-md-12"> <a class="btn btn-lg btn-google btn-block text-uppercase btn-outline" href="#"><img src="https://img.icons8.com/color/16/000000/google-logo.png"> Signup Using Google</a> </div>
+  </div> <br>
+    <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+  </form>
+</div>
+
+
+
+
+
+{% endblock body %}

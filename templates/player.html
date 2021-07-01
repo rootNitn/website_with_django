@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="d-flex justify-content-center">
+{% for i in task %}
+<iframe width="520" height="320" src="https://www.youtube.com/embed/{{i.idi}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+{% endfor %}
+
+</div>
+<div>
+
+</div>
+
+{% endblock body %}

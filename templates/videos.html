@@ -1,0 +1,316 @@
+{% extends 'base.html' %}
+{% block style %}
+.wrapper{
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
+  position:relative;
+}
+
+
+.wrapper iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+/*.wrapper iframe {*/
+/*  pointer-events: none;*/
+/*}*/
+.wrapper iframe{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 120px);
+}
+
+
+
+.wrapper {
+	position:relative;
+	width: 100vw;
+	height: 100vh;
+}
+
+.wrapper img {
+    width: 100%;
+	height: 100vh;
+	object-fit: cover;
+}
+
+.wrapper iframe {
+	display:none;
+	width: 100%;
+	height: 100vh;
+}
+
+.play-btn {
+	position:absolute;
+	z-index:666;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	background-color:transparent;
+	border:0;
+}
+
+.play-btn:hover {
+	cursor:pointer;
+}
+
+.play-btn:focus {
+	outline:0;
+}
+
+{% endblock style %}
+
+{% block body %}
+
+</section>
+<section class="main_head my-5 bg-light py-05">
+  <div class="text-center">
+    <h1 class="display-4">Videos</h1>
+    <hr class="w-25 mx-auto">
+  </div>
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+
+            <picture>
+          <source srcset="/static/img/01.jpg"  type="image/svg+xml">
+          <img src="" class="img-fluid img-thumbnail" class="videos" alt="...">
+          </picture>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <button type="button" data-target=.nitin data-toggle="modal" class="btn btn-sm btn-outline-secondary">Play</button>
+                    
+
+                </div>
+              
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+          <picture>
+          <source srcset="/static/img/01.jpg"  type="image/svg+xml">
+          <img src="" class="img-fluid img-thumbnail" class="videos" alt="...">
+          </picture>
+            <div class="card-body">
+              <p class="card-text">below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="/player"  class="btn btn-sm btn-outline-secondary">Play</a>
+                </div>
+                <small class="text-muted ">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <picture>
+          <source srcset="/static/img/01.jpg"  type="image/svg+xml">
+          <img src="" class="img-fluid img-thumbnail" class="videos" alt="...">
+          </picture>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Play</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <picture>
+          <source srcset="/static/img/01.jpg"  type="image/svg+xml">
+          <img src="" class="img-fluid img-thumbnail" class="videos" alt="...">
+          </picture>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Play</button>
+
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+          <picture>
+          <source srcset="/static/img/01.jpg"  type="image/svg+xml">
+          <img src="" class="img-fluid img-thumbnail" class="videos" alt="...">
+          </picture>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Play</button>
+                  
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+          <picture>
+          <source srcset="/static/img/01.jpg"  type="image/svg+xml">
+          <img src="" class="img-fluid img-thumbnail" class="videos" alt="...">
+          </picture>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Play</button>
+                  
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <picture>
+          <source srcset="/static/img/01.jpg"  type="image/svg+xml">
+          <img src="" class="img-fluid img-thumbnail" class="videos" alt="...">
+          </picture>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Play</button>
+                
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+          <picture>
+          <source srcset="/static/img/01.jpg"  type="image/svg+xml">
+          <img src="" class="img-fluid img-thumbnail" class="videos" alt="...">
+          </picture>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Play</button>
+                  
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <picture>
+          <source srcset="/static/img/01.jpg"  type="image/svg+xml">
+          <img src="" class="img-fluid img-thumbnail" class="videos" alt="...">
+          </picture>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Play</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+<script>
+
+var player
+function onYouTubeIframeAPIReady() {
+    console.log('onYouTubeIframeAPIReady')
+    player = new YT.Player('player', {
+        videoId: 'M7lc1UVf-VE',
+        playerVars: {
+            'playsinline': 1
+        },
+        events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+        }
+    })
+}
+
+function onPlayerReady(event) {
+    event.target.playVideo() // autostart
+}
+
+var done = false;
+function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING && !done) {
+      // do other custom stuff here
+      //setTimeout(stopVideo, 6000);
+      //done = true;
+    }
+}
+
+function stopVideo() {
+    player.stopVideo()
+}
+
+function loadYouTubeVideo() {
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+}
+
+var myModalEl = document.getElementById('dynamicVideoModal')
+myModalEl.addEventListener('show.bs.modal', function (event) {
+    // dynamically create video inside modal
+    loadYouTubeVideo()
+})
+
+
+// manual controls outside YT
+var playBtn = document.getElementById('playBtn')
+playBtn.addEventListener('click', function (event) {
+    console.log('play')
+    player.playVideo()
+})
+
+var pauseBtn = document.getElementById('pauseBtn')
+pauseBtn.addEventListener('click', function (event) {
+    console.log('pause')
+    player.pauseVideo()
+})
+
+
+</script>
+
+{% endblock body %}
