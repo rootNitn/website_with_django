@@ -23,6 +23,7 @@ admin.site.index_title = "Welcome to Technical Things Portal Tech with Technical
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('Home.urls')),
-    path('froala_editor/',include('froala_editor.urls'))
+    path('froala_editor/',include('froala_editor.urls')),
+    path('accounts/', include('allauth.urls')),
     
 ]

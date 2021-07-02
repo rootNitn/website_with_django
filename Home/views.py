@@ -49,7 +49,7 @@ def signup(request):
         if password != cpassword:
             messages.error(request,"your password must be match")
             return redirect("/signup")
-
+ 
         
         user = User.objects.create_user(uname, email, password)
         user.last_name = lname
