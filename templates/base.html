@@ -19,7 +19,7 @@
     {% endblock style %}
   </style>
   <style>
-   
+ 
   
 .ni ul li a{
     position: relative;
@@ -203,22 +203,22 @@
       <div class="ni collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav  ms-auto mb-2 mb-lg-0">
           <li class="nav-item ">
-            <a class="nav-link active" aria-current="/" href="/">Home</a>
+            <a class="nav-link {% block homeactive %}{% endblock homeactive %}" aria-current="/" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="/videos" href="/videos">Videos</a>
+            <a class="nav-link {% block videosactive %}{% endblock videosactive %}" aria-current="/videos" href="/videos">Videos</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link {% block aboutactive %}{% endblock aboutactive %} " href="/about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/about">About</a>
+            <a class="nav-link {% block contactactive %}{% endblock contactactive %}" href="/contact">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/contact">Contact</a>
+            <a class="nav-link " href="/blogs">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/contact">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="/contact">ChatBot</a>
+            <a class="nav-link " href="/contact">ChatBot</a>
           </li>
 
           
@@ -231,7 +231,7 @@
           </li>
           {% if user.is_authenticated %}
           <li class="nav-item dropdown">
-           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{request.user}}
           </a>
           <ul class="dropdown-menu nitin" aria-labelledby="navbarDropdown">
@@ -253,7 +253,12 @@
     </div>
   </nav>
 
-
+  {% for message in messages  %}
+  <div class="alert alert-{{ message.tags }} mb-0 alert-dismissible fade show" role="alert">
+  <strong>Note :- </strong> {{ message }}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
   {%block body%} {% endblock body %}
   <div class="b-example-divider mb-0"></div>
   <footer class="page-footer bg-drak">

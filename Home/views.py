@@ -31,7 +31,7 @@ def signin(request):
             # A backend authenticated the credentials
 
         else:
-            messages.error(request,"your Username must be 8 characters")
+            messages.danger(request,"your Username must be 8 characters")
             return render(request,'signin.html')
             # No backend authenticated the credentials
 
@@ -45,7 +45,8 @@ def signup(request):
         password = request.POST['password']
         cpassword = request.POST['cpassword']
 
-        
+        if len(fname)<2 or len(email)<5 or len(lname)<2 or len(password)>8:
+            messages.error(request,"you fill worng entry")
         if password != cpassword:
             messages.error(request,"your password must be match")
             return redirect("/signup")

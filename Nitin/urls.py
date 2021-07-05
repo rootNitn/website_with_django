@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.conf.urls.static import static
 
 admin.site.site_header = "Nitin Admin"
 admin.site.site_title = "Nitin Admin Portal"
@@ -23,7 +24,9 @@ admin.site.index_title = "Welcome to Technical Things Portal Tech with Technical
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('Home.urls')),
+    path('blogs/', include('blog.urls')),
     path('froala_editor/',include('froala_editor.urls')),
     path('accounts/', include('allauth.urls')),
+    
     
 ]

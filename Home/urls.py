@@ -1,18 +1,21 @@
 from django.contrib import admin, auth
 from django.urls import path
-from Home import views
+from Home import views as ho
 from django.contrib.auth import views as auth_views
+from blog import views as bb
 
 urlpatterns = [
-    path("", views.index, name='Home'),
-    path("about", views.about, name='about'),
-    path("videos", views.videos, name='videos'),
-    path("contact", views.contact, name='contact'),
-    path("signin", views.signin, name='signin'),
-    path("signup", views.signup, name='signup'),
-    path("player", views.player, name='player'),
-   
-    path("logout", views.logouthandle, name='logouthandle'),
+    path("", ho.index, name='Home'),
+    path("about", ho.about, name='about'),
+    path("videos", ho.videos, name='videos'),
+    path("contact", ho.contact, name='contact'),
+    path("signin", ho.signin, name='signin'),
+    path("signup", ho.signup, name='signup'),
+    path("player", ho.player, name='player'),
+    #path("blogs", bb.blogs, name='blog'),
+    #path("profile", bb.profile, name='profile'),
+    #path("newblog", bb.newblog, name='newblog'),
+    path("logout", ho.logouthandle, name='logouthandle'),
     # reset password
     path('password_reset/',auth_views.PasswordResetView.as_view(),name='password_reset'),
     path('password_reset/done/',auth_views.PasswordResetView.as_view(),name='password_reset_done'),
