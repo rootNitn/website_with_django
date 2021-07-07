@@ -11,7 +11,7 @@ class Contact(models.Model):
 
 class video(models.Model):
     idi = models.CharField(max_length=50)
-    title = models.CharField(max_length=30)
+    title = models.CharField(max_length=100)
     desc = models.TextField()
     le = models.IntegerField()
     def __str__(self):

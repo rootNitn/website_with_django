@@ -19,7 +19,9 @@ def about(request):
 def videos(request):
     if request.user.is_anonymous:
         return redirect("/signin")
-    return render(request,'videos.html')
+    vid = video.objects.all()
+    kk = {'task':vid}     
+    return render(request,'videos.html',kk)
 def signin(request):
     if request.method=="POST":
         username = request.POST.get('username')
@@ -80,10 +82,13 @@ def logouthandle(request):
     messages.success(request,"your account logout")
     return redirect("/")    
 
-def player(request):
+def player(request,idi):
     if request.user.is_anonymous:
         return redirect("/signin")
-    vid = video.objects.all()
+    vid = video.objects.filter(idi=idi)[0]
     kk = {'task':vid}    
     
     return render(request,'player.html',kk) 
+
+def chatbot(request):
+    return render(request,'chatbot.html')    
