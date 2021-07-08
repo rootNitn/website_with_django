@@ -13,12 +13,10 @@ def index(request):
 
     return render(request,'index.html')    
 def about(request):
-    if request.user.is_anonymous:
-        return redirect("/signin")
+    
     return render(request,'about.html')    
 def videos(request):
-    if request.user.is_anonymous:
-        return redirect("/signin")
+   
     vid = video.objects.all()
     kk = {'task':vid}     
     return render(request,'videos.html',kk)
@@ -83,8 +81,7 @@ def logouthandle(request):
     return redirect("/")    
 
 def player(request,idi):
-    if request.user.is_anonymous:
-        return redirect("/signin")
+    
     vid = video.objects.filter(idi=idi)[0]
     kk = {'task':vid}    
     

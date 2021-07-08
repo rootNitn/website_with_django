@@ -10,40 +10,32 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-  <title>Hello, world!</title>
+  <title>Blog Post</title>
 </head>
 
+
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="me-5 ms-lg-5">
-          <form class="d-flex">
-            <input class="form-control me-auto" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </ul>
-        <ul class="navbar-nav ms-2 mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" style="color: white;" href="/blogs">Tech Blog</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link navbar-light active" style="color: white;" aria-current="page" href="/blogs">Home</a>
+        </li>
           {% if user.is_authenticated %}
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+            <a class="nav-link dropdown-toggle active" style="color: white;" href="#" id="navbarDropdown" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
               {{request.user}}
             </a>
             <ul class="dropdown-menu nitin" aria-labelledby="navbarDropdown">
-              <li><a class="nav-link active dropdown-item" href="#">Profile</a></li>
-              <li><a class="nav-link active dropdown-item" href="logout">Logout</a></li>
+              <li><a class="nav-link  dropdown-item" href="#">Profile</a></li>
+              <li><a class="nav-link  dropdown-item" href="logout">Logout</a></li>
             </ul>
           </li>
           {% else %}
@@ -52,13 +44,17 @@
           </li>
           {% endif %}
         </ul>
-
+        <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
       </div>
     </div>
   </nav>
 
 
   <div class="container my-3">
+    <h4 class="center">Blog Posts</h4>
     {% for post in allpost %}
     <div class="row no-gutters border rounded overflow-hidden flex-md-row my-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
