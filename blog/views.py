@@ -28,7 +28,7 @@ def newblog(request):
         contact = blog(title=title, content=content,slug=slug,image=image)
         contact.save()
         messages.success(request,"New Post added")
-        return redirect("/blogs/allblog.html")
+        return render(request,'blog/newblog.html')
     
 
     return render(request,'blog/newblog.html')
@@ -42,6 +42,7 @@ def allblog(request):
 
 def blogspost(request, slug):
     post = blog.objects.filter(slug=slug)[0]
+    
     
     contxt = {'post': post}
     return render(request,'blog/display.html',contxt)

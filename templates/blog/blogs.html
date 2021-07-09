@@ -12,7 +12,18 @@
   <link href="/static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="/static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <style>
-
+  .nitin h5{
+font-family: "Comic Sans MS", cursive, sans-serif;
+font-size: 25px;
+letter-spacing: 2px;
+word-spacing: 2px;
+color: #000000;
+font-weight: 700;
+text-decoration: none;
+font-style: italic;
+font-variant: normal;
+text-transform: none;
+}
   </style>
 </head>
 
@@ -71,10 +82,10 @@
         <br><br>
         <h1 class="header center teal-text text-lighten-2">Technical Things</h1>
         <div class="row center">
-          <h5 class="header col s12 light">The first step in blogging is not writing them but reading them.</h5>
+          <h5 class="header col s12 light" style="color: rgb(16, 88, 38);">“The first step in blogging is not writing them but reading them.”</h5>
         </div>
         <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button"
+          <a href="newblog" id="download-button"
             class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
         </div>
         <br><br>
@@ -93,12 +104,12 @@
       {% for post in allpost %}
         <div class="col s12 m4">
         
-          <div class="icon-block">
+          <div class="icon-block nitin">
             <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
             
             <h5 class="center">{{post.title}}</h5>
 
-            <p class="light">{{post.content | truncatewords:50}}</p>
+            <p class="">{{post.content | truncatewords:40}}</p>
            
           </div>
         </div>
@@ -114,27 +125,24 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+          <h5 class="header col s12 " style="color: rgb(16, 88, 38);">“Blogging is a communications mechanism handed to us by the long tail of the Internet.”</h5>
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="/static/img/16.jpg" alt="Unsplashed background img 2"></div>
+    <div class="parallax"><img src="/static/img/07.jpg" alt="Unsplashed background img 2"></div>
   </div>
 
   <div class="container">
     <div class="section">
 
       <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Contact Us</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id
-            nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies
-            eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et
-            pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed.
-            Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam
-            eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-            posuere cubilia Curae;</p>
+        <div class="col s12 center nitin">
+          <h5><i class="mdi-content-send brown-text "></i>Tech Blog</h5>
+          
+          
+          <p style="color: rgb(16, 88, 38);">Linux, Social Engineering, Metasploit-framework, Nmap, Spoofing, Malware, Virus, Web Application Hacking</p>
+          <p style="color: rgb(16, 88, 38);">SQL Injection Vulnerabilities,  Information Gathering, Wireshrek, Deep Web(Tor)</p>
+          <p style="color: rgb(16, 88, 38);">C, C++, python, java, Machine learing, Django, Bootstrip, PHP, React js, JavaScript</p>
         </div>
       </div>
 
@@ -146,17 +154,17 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+          <h5 class="header col s12 light" style="color: rgb(16, 88, 38);">“A blog is only as interesting as the interest shown in others.”</h5>
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="/static/img/15.jpg" alt="Unsplashed background img 3"></div>
+    <div class="parallax"><img src="/static/img/08.jpg" alt="Unsplashed background img 3"></div>
   </div>
 
   <footer class="page-footer teal">
     <div class="container">
       <div class="row">
-        <div class="col l6 s12">
+        <div class="col l6 s12 nitin">
           <h5 class="white-text">Website Bio</h5>
           <p class="grey-text text-lighten-4">My name is Nitin verma, Welcome to Techincal Things.
           Here You found Technical, coding and Hacking videos which is bolck or not block Youtube vidoes.
@@ -164,22 +172,15 @@
 
 
         </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
+        
+        <div class="col l3 s12 nitin" style= "margin-left: 170px; text-align: center;">
           <h5 class="white-text">Connect</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            <li><a class="white-text" href="https://www.facebook.com/technicalthingsbynitin/"><span class="material-icons">facebook</span></a></li>
+            <li><a class="white-text" href="https://www.linkedin.com/in/nitintech07"><span class="iconify" data-icon="mdi-linkedin" data-inline="false"></span></a></li>
+            <li><a class="white-text" href="https://github.com/rootNitn"><span class="iconify" data-icon="icon-park:github" data-inline="false"></span></a></li>
+            <li><a class="white-text" href="https://www.youtube.com/channel/UC1kHBs2VuOff4fh8lHTOnKQ"><span class="iconify" data-icon="foundation:social-youtube" data-inline="false"></span></a></li>
+            <li><a class="white-text" href="https://t.me/technicalthings17"><span class="iconify" data-icon="fontisto:telegram" data-inline="false"></span></a></li>
           </ul>
         </div>
       </div>
@@ -193,6 +194,7 @@
 
 
   <!--  Scripts-->
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="/static/js/materialize.js"></script>
   <script src="/static/js/init.js"></script>

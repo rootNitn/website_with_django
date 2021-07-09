@@ -18,7 +18,8 @@ def about(request):
 def videos(request):
    
     vid = video.objects.all()
-    kk = {'task':vid}     
+    kk = {'task':vid} 
+    #print(vid)    
     return render(request,'videos.html',kk)
 def signin(request):
     if request.method=="POST":
@@ -80,12 +81,8 @@ def logouthandle(request):
     messages.success(request,"your account logout")
     return redirect("/")    
 
-def player(request,idi):
-    
-    vid = video.objects.filter(idi=idi)[0]
-    kk = {'task':vid}    
-    
-    return render(request,'player.html',kk) 
+def player(request):
+    return render(request,'player.html') 
 
 def chatbot(request):
     return render(request,'chatbot.html')    

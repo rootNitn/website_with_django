@@ -35,65 +35,52 @@
 
   </script>
   <script>
-    $(document).ready(function(){
-      $("#mytextarea").submit(function (e) {
-        var content = tinymce.get("texteditor").getContent();
-        $("#").html(content);
-        return false;
-        
-      })
-    })
+    
   </script>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Tech Blog</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
+ <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" style="color: white;" href="/blogs">Tech Blog</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link navbar-light active" style="color: white;" aria-current="page" href="/blogs">Home</a>
+        </li>
           {% if user.is_authenticated %}
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+            <a class="nav-link dropdown-toggle active" style="color: white;" href="#" id="navbarDropdown" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
               {{request.user}}
             </a>
             <ul class="dropdown-menu nitin" aria-labelledby="navbarDropdown">
-              <li><a class="nav-link active dropdown-item" href="#">Profile</a></li>
-              <li><a class="nav-link active dropdown-item" href="logout">Logout</a></li>
+              <li><a class="nav-link  dropdown-item" href="#">Profile</a></li>
+              <li><a class="nav-link  dropdown-item" href="logout">Logout</a></li>
             </ul>
           </li>
           {% else %}
           <li class="bt nav-item ">
-            <a class="nav-link active " aria-current="page" href="/signin"><span></span>
-              <span></span>
-              <span></span>
-              <span></span>Sign in</a>
+            <a class="nav-link active " aria-current="page" href="/signin">Sign in</a>
           </li>
           {% endif %}
         </ul>
-
-
-        </ul>
-
+        <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
       </div>
+    </div>
   </nav>
   <section>
     <div class="container">
 
       <div class="row g-12 h-200 justify-content-center  align-items-center">
         <h1 class="h3 mt-3 text-center">Tech Blog</h1>
-        <form class="col-md-8 col-lg-8 col-xl-8  bg-light" method="POST" action="/blogs/allblog">
+        <form class="col-md-8 col-lg-8 col-xl-8  bg-light" method="POST" action="">
           {% csrf_token %}
           <div class="form-group">
 
