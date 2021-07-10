@@ -81,8 +81,10 @@ def logouthandle(request):
     messages.success(request,"your account logout")
     return redirect("/")    
 
-def player(request):
-    return render(request,'player.html') 
+def player(request,idi):
+    vid = video.objects.filter(idi=idi)[0]
+    kk = {'task':vid} 
+    return render(request,'player.html',kk) 
 
 def chatbot(request):
     return render(request,'chatbot.html')    

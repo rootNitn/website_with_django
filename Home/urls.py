@@ -17,11 +17,12 @@ urlpatterns = [
     #path("profile", bb.profile, name='profile'),
     #path("newblog", bb.newblog, name='newblog'),
     path("logout", ho.logouthandle, name='logouthandle'),
-    #path("<str:idi>", ho.player, name='player'),
+    
     # reset password
     path('password_reset/',auth_views.PasswordResetView.as_view(),name='password_reset'),
     path('password_reset/done/',auth_views.PasswordResetView.as_view(),name='password_reset_done'),
     path('reset/<uidb64>/<token>/',auth_views.PasswordResetConfirmView.as_view(),name='password_reset_confirm'),
     path('reset/done/',auth_views.PasswordResetCompleteView.as_view(),name='password_reset_complete'),
+    path("<str:idi>", ho.player, name='player'),
 
 ]
